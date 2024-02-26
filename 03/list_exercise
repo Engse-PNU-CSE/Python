@@ -1,0 +1,4 @@
+guest_list = ['jimmy', 'doctor', 'hong']
+message = "welcome my home party, "
+
+print(message + guest_list[0])

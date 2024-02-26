@@ -1,0 +1,12 @@
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print("here is the original List:")
+print(cars)
+print("here is the sorted List:")
+print(sorted(cars))
+print("here is the original List again:")
+print(cars)
+cars.sort()
+print(cars)
+cars.sort(reverse = True)
+print(cars)
+print(len(cars))

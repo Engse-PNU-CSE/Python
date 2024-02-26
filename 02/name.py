@@ -6,6 +6,9 @@ print(name.lower())
 
 firstName = "ada"
 lastName = "lovelace"
-fullname = f"{firstName} {lastName}"
+fullname = f"{firstName} {lastName}!"
 
-print(fullname.title())
+print(fullname)
+
+message = f"Hello, {fullname.title()}"
+print(message)

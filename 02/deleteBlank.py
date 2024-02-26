@@ -1,5 +1,7 @@
-favoriteLanguage = 'python.on   '
-print(favoriteLanguage)
-print(favoriteLanguage.rstrip())
+favoriteLanguage = ' python.py '
+favoriteLanguage
+favoriteLanguage.rstrip()
+favoriteLanguage = favoriteLanguage.strip()
 print(favoriteLanguage.removeprefix('py'))
-print(favoriteLanguage.removesuffix('on'))
+print("python")
+print("\tpython")
