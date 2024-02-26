@@ -1,4 +1,4 @@
 print("hello world")
 
-message = "hello. python"
+message = "hello, python!"
 print(message)
