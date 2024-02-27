@@ -6,4 +6,13 @@
 
 # What did I study?
  - Python
-
+ - Variables and Simple Data Types
+ - Introducing the List
+ - addressing the list
+ - If Statement
+ - Dictionary
+ - User input and while loop
+ - Function
+ - Class
+ - File and Exception
+ - Code Test
