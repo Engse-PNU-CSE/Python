@@ -1,1 +1,2 @@
-print("hello, python")
+for s in 'asdfasdf':
+    print(s)
