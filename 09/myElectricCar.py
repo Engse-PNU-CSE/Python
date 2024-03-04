@@ -1,4 +1,4 @@
-from electricCar import electricCar
+from electricCar import ElectricCar
 
-myLeaf = electricCar('hyndai', 'ionic 5', '2023')
-myLeaf
+myLeaf = ElectricCar('hyndai', 'ionic 5', '2023')
+print(myLeaf.getDescriptiveName())
