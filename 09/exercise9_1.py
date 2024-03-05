@@ -18,13 +18,3 @@ class User:
         print(f"Name : {fullname}")
     def greet_user(self):
        print(f"welcome, {self.fname} {self.lname}")
-
-
-my_restaurant = Restaurant("kim", "korean")
-print(my_restaurant.restaurant_name, my_restaurant.cuisine_type, my_restaurant._Restaurant__price)
-my_restaurant.discribe_restaurant() 
-my_restaurant.open_restaurant()
-
-engse = User("kim", "seyoung")
-engse.describe_user()
-engse.greet_user()
