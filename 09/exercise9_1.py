@@ -12,7 +12,6 @@ class User:
     def __init__(self, fname, lname):
         self.lname = lname
         self.fname = fname
-        self.__price = 4_000
     def describe_user(self):
         fullname = f"{self.fname} {self.lname}"
         print(f"Name : {fullname}")
