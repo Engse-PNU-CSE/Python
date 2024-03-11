@@ -6,6 +6,7 @@ screen = pygame.display.set_mode((1280,720))
 
 clock = pygame.time.Clock()
 img = pygame.image.load('./chapter_14/scoring/images/ship.bmp')
+rect = img.get_rect()
 while True:
     # Process player inputs.
     for event in pygame.event.get():
@@ -21,7 +22,7 @@ while True:
 
     # Render the graphics here.
     # ...
-    rect = img.get_rect()
+
     screen.blit(img, rect)
 
     pygame.display.flip()  # Refresh on-screen display
