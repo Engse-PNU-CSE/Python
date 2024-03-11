@@ -53,7 +53,7 @@ class AlienInvasion:
                 self._update_aliens()
 
             self._update_screen()
-            self.clock.tick(60)
+            self.clock.tick(144)
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""
