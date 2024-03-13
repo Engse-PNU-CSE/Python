@@ -1,12 +1,26 @@
 import matplotlib.pyplot as plt
+import numpy as np
+import random
 
-squares = [1, 4, 9, 16, 25]
-fig, ax = plt.subplots()
-ax.plot(squares, linewidth = 3)
 
-ax.set_title("Square Numbers", fontsize = 24)
-ax.set_xlabel("Value", fontsize = 14)
-ax.set_ylabel("Square of Value", fontsize = 14)
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots()  # Create a figure containing a single axes.
+x = [1, 2, 3, 4]
+y = [1, 4, 2, 3]
+ax.scatter(x, y)  # Plot some data on the axes.
+ax.plot(x, y, label = 'blue')
 
-ax.tick_params(labelsize=14)
+x2 = [1, 2, 3, 4]
+y2 = [1, 2, 4, 2]
+ax.scatter(x2, y2)  # Plot some data on the axes.
+ax.set_aspect('equal')
+ax.plot(x2, y2, label = 'red')
+ax.legend()
+ax.set_xlim(0, 10)
+ax.set_xlabel('age')
+ax.set_ylim(0, 10)
+ax.set_ylabel('BMI')
+ax.set_title("Flot A, B")
+plt.savefig('plot.png')
 plt.show()
+print(plt.style.available)
