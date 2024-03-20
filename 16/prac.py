@@ -1,18 +1,19 @@
-import json
 import plotly.express as px
+import requests
 # 1. json - dump, load <--- file
 # 2. json - dumps, loads <--- str -> dict, dict -> str
 
-mag = []
-lat = []
-lon = []
+url = "https://api.github.com/search/repositories"
+url += "?q=language:python+sort:stars+stars:>3000"
+headers = {"Accept" : "application/vnd.github.v3+json"}
+r = requests.get(url, headers=headers)
 
-with open('./16/mapping_global_datasets/eq_data/eq_data_1_day_m1.geojson', 'r', encoding='utf-8') as f:
-    data = json.load(f)
-    for feature in data['features']:
-        mag.append(feature['properties']['mag'])
-        lon.append(feature['geometry']['coordinates'][0])
-        lat.append(feature['geometry']['coordinates'][1])
+response_dict = r.json()
+repo_dicts = response_dict['items']
+repo_names, stars = [], []
+for repo_dict in repo_dicts:
+    repo_names.append(repo_dict['name'])
+    stars.append(repo_dict['stargazers_count'])
 
-fig = px.scatter_geo(lat=lat, lon=lon, title="Wow")
+fig = px.bar(x=repo_names, y=stars)
 fig.show()
